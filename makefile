@@ -5,4 +5,4 @@ clean:
 	rm -rf ./emgs/outputs/*
 
 gitrestore:
-	git restore emgs/outputs/plotly/*
+	git restore emgs/outputs/plotly/*	
