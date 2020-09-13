@@ -3,3 +3,6 @@ start:
 
 clean:
 	rm -rf ./emgs/outputs/*
+
+gitrestore:
+	git restore emgs/outputs/plotly/*

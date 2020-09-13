@@ -15,7 +15,7 @@ def originalDataPlotMarkers(df, f, threshold):
 	ax.plot(df['time (s)'], df['EMG (mV)'])
 	ax.scatter(only_changes['time (s)'], only_changes['EMG (mV)'], c=only_changes['change_colors'])
 	ax.hlines(threshold, min(df['time (s)']), max(df['time (s)']), colors = 'r')
-	plt.savefig(f'./emgs/outputs/regular/{f}_regular')
+	plt.savefig(f'./emgs/outputs/regular/{f}_regular_dpt')
 	plt.clf()
 
 	# Save for contraction count later 
@@ -35,7 +35,7 @@ def resampledDataPlotMarkers(df,f, threshold):
 	ax.plot(df['time (s)'], df['EMG (mV)'])
 	ax.scatter(interp.index[only_changes.index], interp[only_changes.index], c=only_changes)
 	ax.hlines(threshold, min(df['time (s)']), max(df['time (s)']), colors = 'r')
-	plt.savefig(f'./emgs/outputs/resampled/{f}_resampled')
+	plt.savefig(f'./emgs/outputs/resampled/{f}_resampled_dpt')
 	plt.clf()
 
 
@@ -45,10 +45,16 @@ def determineThreshold(df, f):
 	scaling = 0 # Scaling Factor Dependent on File
 	if 'healthy' in f:
 		scaling = 3
+		t1 = 1.382
+		t2 = 1.465
 	elif 'myopathy' in f:
 		scaling = 2
+		t1 = 1.24075
+		t2 = 1.28175
 	else:
 		scaling = 1
+		t1 = 1.245
+		t2 = 1.319
 	print(f'Using Scaling Factor: {scaling} ')
 
 	# Calculate Threshold

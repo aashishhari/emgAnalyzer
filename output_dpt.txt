@@ -1,0 +1,58 @@
+python3 main.py
+********************************************************************************
+Analyzing File: emg_healthy.csv
+--------------------------------------------------------------------------------
+Calculating Threshold Based on Sample Interval: [1.382s - 1.465s] ...
+Using Scaling Factor: 3 
+Calculated Threshold: 0.09485788245917838
+28 Contractions Detected
+16 Miscounts Detected
+12 Contractions Estimated
+Average Time Duration Between Contractions: 37.7045 milliseconds
+Contraction Analysis Complete.
+--------------------------------------------------------------------------------
+28 Peaks Found Over 28 Detected Contractions
+Peak Info can be found at emgs/outputs/peaks.csv
+Peak Analysis Complete.
+--------------------------------------------------------------------------------
+All Done!
+******************************************************************************** 
+
+********************************************************************************
+Analyzing File: emg_myopathy.csv
+--------------------------------------------------------------------------------
+Calculating Threshold Based on Sample Interval: [1.382s - 1.465s] ...
+Using Scaling Factor: 2 
+Calculated Threshold: 0.21802408968116815
+29 Contractions Detected
+16 Miscounts Detected
+13 Contractions Estimated
+Average Time Duration Between Contractions: 32.1667 milliseconds
+Contraction Analysis Complete.
+--------------------------------------------------------------------------------
+29 Peaks Found Over 29 Detected Contractions
+Peak Info can be found at emgs/outputs/peaks.csv
+Peak Analysis Complete.
+--------------------------------------------------------------------------------
+All Done!
+******************************************************************************** 
+
+********************************************************************************
+Analyzing File: emg_neuropathy.csv
+--------------------------------------------------------------------------------
+Calculating Threshold Based on Sample Interval: [1.382s - 1.465s] ...
+Using Scaling Factor: 1 
+Calculated Threshold: 0.26702563432102233
+24 Contractions Detected
+15 Miscounts Detected
+9 Contractions Estimated
+Average Time Duration Between Contractions: 49.125 milliseconds
+Contraction Analysis Complete.
+--------------------------------------------------------------------------------
+24 Peaks Found Over 24 Detected Contractions
+Peak Info can be found at emgs/outputs/peaks.csv
+Peak Analysis Complete.
+--------------------------------------------------------------------------------
+All Done!
+******************************************************************************** 
+
