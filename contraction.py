@@ -58,7 +58,7 @@ def determineThreshold(df, f):
 	print(f'Using Scaling Factor: {scaling} ')
 
 	# Calculate Threshold
-	sampleInterval = df[(df['time (s)'] >= 1.382) & (df['time (s)']<=1.465)]
+	sampleInterval = df[(df['time (s)'] >= t1) & (df['time (s)']<=t2)]
 	threshold = sampleInterval['EMG (mV)'].mean()+scaling*sampleInterval['EMG (mV)'].std()
 	print(f'Calculated Threshold: {threshold}')
 
